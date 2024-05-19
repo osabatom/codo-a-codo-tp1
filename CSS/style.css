@@ -1,0 +1,531 @@
+/* General, variables */
+:root {
+    --colorprimary:#005A4E;
+    --colorsecondary:#0C0C0F;
+    --coloraccent: #ffbf00;
+    --colorsecondaryaccent: #722f37;
+    --colorterciary: white;
+    --ff: "DM Sans";
+    --h1: bold (max(48px,4vw) / max(54px,5vw)) 64px var(--ff);
+    --h2: bold 36px/36px var(--ff);
+    --h3: bold 24px/30px var(--ff);
+    --p: 18px/30px var(--ff);
+    --transition: 0.3s ease-in-out;
+}
+
+
+h1 {
+    font: var(--h1);
+    color: var(--coloraccent);
+}
+h2 {
+    font: var(--h2);
+    color: var(--coloraccent);
+}
+h3 {
+    font: var(--h3);
+    color: var(--coloraccent);
+}
+p {
+    font: var(--p);
+    color: var(--colorterciary);
+}
+li {
+    font: var(--p);
+    color: var(--colorterciary);
+}
+
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+button img {
+    width: 16px;
+}
+
+button {
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: var(--coloraccent);
+    transition: var(--transition);
+}
+
+.body {
+    background-color: var(--colorprimary);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--colorsecondary);
+}
+
+.footer {
+    /* width: 90%; */
+    /* background-image: url("img/fondo_cerveza.webp"); */
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header{
+    background-color: var(--coloraccent);
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.header img {
+    width: 12%;
+    min-width: 20%;
+    
+}
+
+.header-logo {
+    flex: 1;
+    min-width: 20%;
+}
+
+header {
+    background-color: #333; 
+    padding: 10px; 
+}
+
+.header-nav {
+    flex: 1;
+    width: 100%;
+}
+
+.hero-col-1 {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;   
+}
+
+.hero-col-2 {
+    text-align: center;
+    flex: 1;
+}
+
+.hero-col-2 img {
+    width: 50%;
+    border-radius: 12px;
+}
+
+.iframes {
+    width: 90%;
+    box-sizing: border-box;
+    height: auto;
+    margin: 10px auto;
+}
+
+.nav {
+    list-style-type: none; 
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0; 
+    width: 100%;
+}
+
+.nav li {
+    flex: 1;
+    text-align: center; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nav a {
+    color: var(--colorsecondary); 
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.nav a:hover {
+    background-color: var(--colorprimary);
+    opacity: 0.7;
+}
+
+
+.section-hero {
+    display:flex;
+    justify-content: space-between;
+}
+
+.section {
+    display:flex;
+    justify-content: space-between;
+}
+
+.section-col-1 {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.section-col-1 li {
+    list-style-type: none;
+}
+
+.section-col-2 {
+    text-align: center;
+    flex: 1;
+}
+
+.section-col-2 img {
+    width: 50%;
+    border-radius: 12px;
+}
+.section-col-2 iframe {
+    width: 50%;
+}
+
+/* Menu */
+
+.slider-frame {
+    text-align: center;
+    width: 50%;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0; 
+    width: 400%;
+    animation: slide 16s infinite ease-in-out;
+}
+
+.slider-frame li {
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+
+.menu-sugerencia {
+    text-align: center;
+}
+
+.menu {
+    display:flex;
+    
+}
+
+.menu-col-1 {
+    flex: 0 1 50%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+
+.menu-col-2 {
+    flex: 1; 
+    overflow-y: auto;
+    
+}
+
+/* Fin menu */
+
+
+/* Footer  */
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.social-icons img {
+    width: 20px;
+}
+
+.banner {
+    display:flex;
+}
+
+svg {
+    fill: var(--colorsecondary);
+    width: 20px;
+}
+
+svg:hover {
+    fill: var(--coloraccent);
+}
+
+/* Fin Footer  */
+
+/* Reservas  */
+
+.contenedor_reservas{
+    /*width: 90%;*/
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,auto);
+}
+.reservas_tit{
+    background: var(--colorsecondaryaccent);
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reservas_mail{
+    background: var(--coloraccent);
+    color: #000; 
+    font-size: 18px;
+}
+
+.reservas_input{
+    background: var(--coloraccent);
+    /* background: #5f89e3; */
+    color: #000;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,auto);
+}
+
+.reservas_input legend {
+    font:bold 20px/30px var(--ff);
+    position: absolute;
+    /* top: 0; */
+    /* left: 50%; */
+    transform: translateY(-50%);
+    padding: 0 5px;
+}
+
+.caja1{
+    grid-column: 1;
+    grid-row: 1;
+}
+.caja2{
+    grid-column: 1;
+    grid-row: 2;
+}
+.caja3{
+    grid-column: 1;
+    grid-row: 3;
+}
+.caja4{
+    grid-column: 1;
+    grid-row: 4;
+}
+.caja5{
+    grid-column: 1;
+    grid-row: 5;
+}
+.caja5-5{
+    grid-column: 1;
+    grid-row: 6;
+}
+.caja6{
+    grid-column: 2;
+    grid-row: 1 / 5;
+}
+.caja7{
+    grid-column: 1;
+    grid-row: 7;
+}
+.caja8{
+    grid-column: 2;
+    grid-row: 7;    
+}
+input:focus {
+    border: 1px solid yellow;
+}
+
+/* Fin Reservas  */
+
+/* Nosotros */
+
+.nosotros {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.nosotros a {
+    text-decoration: none;
+    font-style: bold;
+    
+}
+/* Fin nosotros */ 
+
+@media (max-width: 1200px) {
+    .header {
+        flex-direction: column;
+    }
+    .aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    aside {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero-col-1 {
+        text-align: right;
+    }
+    .hero-col-2 {
+        text-align: left;
+    }
+    .nav {
+        flex-direction: row;
+        align-items: center;
+    }
+    .section-col-1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: right;
+    }
+    .section-col-2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: left;
+    }
+    .social-icons {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+    .social-icons img {
+        width: 20px;
+    }
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 470px) { 
+    .header {
+        flex-direction: column;
+        max-width: 100%;
+        min-width: auto;
+    }
+    header {
+        width: 100%;
+    }
+    .header-logo {
+        order: 1; 
+    }
+    .header-nav {
+        order: 2; 
+    }
+    .hero-col-1 {
+        width: 100%; 
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .hero-col-2 {
+        text-align: center;
+    }
+    .nav {
+        justify-content: center;
+        flex-direction: row; 
+        align-items: center; 
+    }
+    .nav li {
+        margin-bottom: 10px; 
+    }
+    .section-hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+    .section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+    .section-col-1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+    .section-col-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+}
+
+/* Animaciones  */
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+body {
+    animation: fade-in 1.5s ease;
+}
+
+section {
+    animation: slide-in 1s ease;
+}

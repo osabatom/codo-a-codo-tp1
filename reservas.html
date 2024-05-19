@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/reserva.png" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <title> Reservas - Cerveceria Los 4 </title>
+</head>
+
+<body class="body">
+
+<div class="header-container"></div> 
+
+<main>
+    <section class="contenedor_reservas">
+        <a id="reservas"></a>
+        <div class="contenedor_reservas_tit">
+            <div class="reservas_tit">
+                <h1>Reservas y sugerencias.</h1>
+            </div>
+        </div>
+
+        <div class="reservas_mail">
+            Podés reservar tu espacio para eventos enviando un mail a
+            <a href="mailto:contacto@losquatro.com.ar" target="_self">
+                <span class="mail">contacto@losquatro.com.ar</span>
+            </a>
+        </div>
+        <form action="" method="post">
+            <fieldset class="reservas_input">
+                <legend> Solicitá tu reserva </legend>
+                <div class="caja1">
+                    <br>
+                    Nombre<br>
+                    <label for="nombre"></label>
+                    <input type="text" id="nombre" name="nombre" required size="30" placeholder="Nombre y Apellido" maxlength="30">
+                </div>
+                <div class="caja2">
+                    Dejanos tu mail<br>
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" size="30" required placeholder="Email" maxlength="30">
+                </div>
+                <div class="caja3">
+                    Dejanos tu número<br>
+                    <label for="tel"></label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="01-2345-6789">
+                </div>
+                <div class="caja4">
+                    ¿Cuántos son?<br>
+                    <label for="personas"></label>
+                    <input type="number" id="personas" name="personas" min="1" max="50" required size="30" placeholder="Cant de personas">
+                </div>
+                <div class="caja5">
+                    Elegí la fecha:<br>
+                    <label for="fecha"></label>
+                    <input type="date" name="Fecha" id="Fecha" required size="30" placeholder="fecha">
+                </div>
+                <div class="caja5-5">
+                    Elegí una sucursal:<br>
+                    <label for="Sucursal"></label>
+                    <input type="radio" id="option1" name="option" value="option1" required>
+                    <label for="option1">Almagro</label><br>
+                    <input type="radio" id="option2" name="option" value="option2" required>
+                    <label for="option2">Boedo</label><br>
+                    <input type="radio" id="option3" name="option" value="option3" required>
+                    <label for="option3">Caballito</label>
+                </div>
+                <div class="caja6">
+                    Dejanos un mensaje <br>
+                    <label class="msj"></label>
+                    <textarea name="msj" id="msj" cols="40" rows="10" placeholder="contanos mas"></textarea>
+                </div>
+                <div class="caja7">
+                    <input type="checkbox" name="condiciones" id="condiciones" placeholder="condiciones"> Acepto recibir ofertas a traves del correo electronico y/o celular
+                </div>
+                <div class="caja8">
+                    <input type="submit" value="Enviar Datos">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</main>
+
+<div class="footer-container"></div> 
+
+</body>
+
+</html>
