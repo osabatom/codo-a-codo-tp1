@@ -76,3 +76,85 @@ document.addEventListener('DOMContentLoaded', function() {
     footerContainer.innerHTML = crearFooter();
 });
 
+// Validación
+
+document.addEventListener('DOMContentLoaded', function () {
+    var nombreInput = document.getElementById('nombre');
+    var emailInput = document.getElementById('email');
+    var phoneInput = document.getElementById('phone');
+    var personasInput = document.getElementById('personas');
+    var fechaInput = document.getElementById('Fecha');
+    var condicionesInput = document.getElementById('condiciones');
+    var submitBtn = document.querySelector('input[type="submit"]');
+
+    function validarNombre() {
+        var nombreValor = nombreInput.value.trim();
+
+        if (nombreValor === '') {
+            nombreInput.setCustomValidity('Por favor, ingresa tu nombre.');
+        } else {
+            nombreInput.setCustomValidity('');
+        }
+    }
+
+    function validarEmail() {
+        var emailValor = emailInput.value.trim();
+
+        if (emailValor === '') {
+            emailInput.setCustomValidity('Por favor, ingresa tu correo electrónico.');
+        } else {
+            emailInput.setCustomValidity('');
+        }
+    }
+    
+    function validarTelefono() {
+        var phoneValor = phoneInput.value.trim();
+
+        if (phoneValor === '') {
+            phoneInput.setCustomValidity('Por favor, ingresa tu número de teléfono.');
+        } else {
+            phoneInput.setCustomValidity('');
+        }
+    }
+    
+    function validarPersonas() {
+        var personasValor = personasInput.value.trim();
+
+        if (personasValor === '') {
+            personasInput.setCustomValidity('Por favor, ingresa la cantidad de personas.');
+        } else {
+            personasInput.setCustomValidity('');
+        }
+    }
+    
+    function validarFecha() {
+        var fechaValor = fechaInput.value.trim();
+
+        if (fechaValor === '') {
+            fechaInput.setCustomValidity('Por favor, selecciona una fecha.');
+        } else {
+            fechaInput.setCustomValidity('');
+        }
+    }
+    
+    
+    nombreInput.addEventListener('input', validarNombre);
+    emailInput.addEventListener('input', validarEmail);
+    phoneInput.addEventListener('input', validarTelefono);
+    personasInput.addEventListener('input', validarPersonas);
+    fechaInput.addEventListener('input', validarFecha);
+    condicionesInput.addEventListener('change', validarCondiciones);
+    
+    submitBtn.addEventListener('click', function (event) {
+        validarNombre();
+        validarEmail();
+        validarTelefono();
+        validarPersonas();
+        validarFecha();
+
+        if (!this.form.checkValidity()) {
+            // event.preventDefault();
+            alert('Por favor, completa el formulario correctamente.');
+        }
+    });
+});
